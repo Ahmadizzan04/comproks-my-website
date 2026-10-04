@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CV Karya Sejahtera | Distributor FMCG & Pengembangan Pasar</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #ffffff;
+    }
+
+    :root {
+      --blue: #0b2d5c;
+      --blue-dark: #061b36;
+      --blue-soft: #174b86;
+      --yellow: #f6c915;
+      --yellow-dark: #d8ab00;
+      --white: #ffffff;
+      --gray: #a9b5c4;
+    }
+
+
+    /* NAVBAR */
+    .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #071a33;
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .brand-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-dark);
+      font-size: 24px;
+      font-weight: 900;
+      box-shadow: 0 8px 25px rgba(246, 201, 21, 0.18);
+    }
+
+    .brand-text h2 {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    .brand-text span {
+      font-size: 10px;
+      letter-spacing: 1.7px;
+      color: #9cafc4;
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-btn {
+      background: var(--yellow);
+      color: var(--blue-dark) !important;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: 800 !important;
+    }
+
+    .nav-btn:hover {
+      background: #ffe25c;
+    }
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    width: 100%;
+    background: #041426;
+    color: #ffffff;
+}
+
+
+/* CONTAINER */
+
+.footer-container {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+    padding: 65px 20px 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.2fr
+        1.5fr
+        1fr;
+
+    gap: 55px;
+}
+
+
+/* ==================================================
+   COLUMN
+================================================== */
+
+.footer-column h3 {
+    color: #f5c518;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+.footer-column ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+.footer-column ul li {
+    color: #d5deea;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+.footer-column ul li a {
+    color: #d5deea;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-column ul li a:hover {
+    color: #f5c518;
+
+    padding-left: 5px;
+}
+
+
+/* ==================================================
+   SOCIAL MEDIA
+================================================== */
+
+.footer-social {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+
+.footer-social a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.1);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-social a:hover {
+    background: #f5c518;
+
+    color: #041426;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+
+.contact-icon {
+    color: #f5c518;
+
+    font-size: 18px;
+
+    width: 22px;
+}
+
+
+.contact-item p {
+    color: #d5deea;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ==================================================
+   OPERATIONAL HOURS
+================================================== */
+
+.operational-item {
+    margin-bottom: 20px;
+}
+
+
+.operational-item p {
+    color: #d5deea;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+
+.operational-item strong {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   FOOTER BOTTOM
+================================================== */
+
+.footer-bottom {
+    background: #020d1b;
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.footer-bottom-container {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.footer-bottom p {
+    color: #8998aa;
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 50px;
+    }
+
+
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="#" class="brand">
+        <div class="brand-icon">KS</div>
+
+        <div class="brand-text">
+          <h2>CV KARYA SEJAHTERA</h2>
+          <span>Distributor FMCG & Pengembangan Pasar</span>
+        </div>
+      </a>
+
+      <ul class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="visi-misi.html">Visi & Misi</a>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <li><a href="index.html#Our Brands">Brands</a></li>
+        <li><a href="index.html#lokasi" class="nav-btn">Lokasi Toko</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- KOLOM 1 -->
+        <div class="footer-column">
+
+            <h3>Profil Perusahaan</h3>
+
+            <ul>
+                <li>
+                    <a href="tentang-kami.html">
+                        Tentang Kami
+                    </a>
+                </li>
+
+                <li>
+                    <a href="visi-misi.html">
+                        Visi & Misi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Our Brands">
+                        Brand
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#lokasi">
+                        Lokasi
+                    </a>
+                </li>
+            </ul>
+
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-social">
+
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    IG
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    in
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    ▶
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- KOLOM 2 -->
+        <div class="footer-column">
+
+            <h3>Layanan Distribusi</h3>
+
+            <ul>
+                <li>
+                    Distribusi FMCG
+                </li>
+
+                <li>
+                    Pengembangan Pasar
+                </li>
+
+                <li>
+                    Warehouse & Logistics
+                </li>
+
+                <li>
+                    Penjualan & Field Force
+                </li>
+
+                <li>
+                    Distribusi Retail & Grosir
+                </li>
+            </ul>
+
+        </div>
+
+
+        <!-- KOLOM 3 -->
+        <div class="footer-column footer-contact">
+
+            <h3>Alamat & Kontak</h3>
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    📍
+                </span>
+
+                <p>
+                    Jl. Niaga No. 9 Ruteng, Manggarai,Nusa Tenggara Timur
+                </p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    📍
+                </span>
+
+                <p>
+                    Jl. Opeseter Maun No.09, Kec. Komodo, Labuan Bajo, Nusa Tenggara Timur
+                </p>
+
+            </div>
+            
+
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ☎
+                </span>
+
+                <p>
+                    +62 8133 9339 900 (Ruteng)
+                </p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ☎
+                </span>
+
+                <p>
+                    +62 8135 3188 593 (Bajo)
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ✉
+                </span>
+
+                <p>
+                    info@karyasejahtera.co.id
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- KOLOM 4 -->
+        <div class="footer-column">
+
+            <h3>Jam Operasional</h3>
+
+            <div class="operational-item">
+
+                <p>Senin - Sabtu</p>
+
+                <strong>
+                    08.00 – 17.00 WITA
+                </strong>
+
+            </div>
+
+            <div class="operational-item">
+
+                <p>Minggu</p>
+
+                <strong>
+                    Tutup
+                </strong>
+
+            </div>
+
+            <div class="operational-item">
+
+                <p>Hari Libur</p>
+
+                <strong>
+                    Buka 08.00 – 17.00 WITA
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p>
+                © 2026 CV Karya Sejahtera. All Rights Reserved | Distributor FMCG & Pengembangan Pasar
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
