@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Visi & Misi | CV Karya Sejahtera</title>
+
+    <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #ffffff;
+    }
+
+    :root {
+      --blue: #0b2d5c;
+      --blue-dark: #061b36;
+      --blue-soft: #174b86;
+      --yellow: #f6c915;
+      --yellow-dark: #d8ab00;
+      --white: #ffffff;
+      --gray: #a9b5c4;
+    }
+
+
+/* ==================================================
+   VISI MISI - GLOBAL
+================================================== */
+
+.vm-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.vm-hero {
+    width: 100%;
+
+    /* BACKGROUND GAMBAR + OVERLAY NAVY */
+    background:
+        linear-gradient(
+         rgba(7, 26, 51, 0.82),
+         rgba(7, 26, 51, 0.82)
+        ),
+        url("assets/img/visimisi.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 30px 20px 65px;
+
+    text-align: center;
+}
+
+
+.vm-hero .vm-container {
+    max-width: 800px;
+}
+
+
+.vm-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #f5c518;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 16px;
+}
+
+
+.vm-label::before,
+.vm-label::after {
+    content: "";
+
+    width: 40px;
+    height: 2px;
+
+    background: #f5c518;
+}
+
+
+.vm-hero h2 {
+    color: #ffffff;
+
+    font-size: 52px;
+    line-height: 1.15;
+
+    font-weight: 900;
+
+    margin: 0 0 18px;
+}
+
+
+.vm-hero h2 span {
+    color: #f5c518;
+}
+
+
+.vm-hero p {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+    /* ==================================================
+    PROFIL SINGKAT
+    ================================================== */
+
+    .vm-about {
+        width: 100%;
+
+        background: #ffffff;
+
+        padding: 60px 20px;
+    }
+
+
+    .vm-about-grid {
+        display: grid;
+
+        grid-template-columns: 0.35fr 1fr;
+
+        gap: 45px;
+
+        align-items: center;
+    }
+
+
+    /* 2005 */
+
+    .vm-about-number {
+        min-height: 230px;
+
+        background: #071a33;
+
+        padding: 40px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        border-bottom: 6px solid #f5c518;
+    }
+
+
+    .vm-about-number strong {
+        color: #f5c518;
+
+        font-size: 60px;
+        line-height: 1;
+
+        font-weight: 900;
+
+        margin-bottom: 15px;
+    }
+
+
+    .vm-about-number span {
+        color: #ffffff;
+
+        font-size: 13px;
+        line-height: 1.6;
+
+        font-weight: 700;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    /* ABOUT CONTENT */
+
+    .section-small-title {
+        display: block;
+
+        color: #f5c518;
+
+        font-size: 11px;
+        font-weight: 900;
+
+        letter-spacing: 2.5px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .vm-about-content h3 {
+        max-width: 700px;
+
+        color: #071a33;
+
+        font-size: 38px;
+        line-height: 1.2;
+
+        font-weight: 900;
+
+        margin: 0 0 24px;
+    }
+
+
+    .vm-about-content h3 span {
+        color: #f5c518;
+    }
+
+
+    .vm-about-content p {
+        color: #697386;
+
+        font-size: 15px;
+        line-height: 1.9;
+
+        text-align: justify;
+
+        margin: 0 0 15px;
+    }
+
+
+    .vm-about-content strong {
+        color: #071a33;
+    }
+
+
+    /* NAVBAR */
+    .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #071a33;
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .brand-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-dark);
+      font-size: 24px;
+      font-weight: 900;
+      box-shadow: 0 8px 25px rgba(246, 201, 21, 0.18);
+    }
+
+    .brand-text h2 {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    .brand-text span {
+      font-size: 10px;
+      letter-spacing: 1.7px;
+      color: #9cafc4;
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-btn {
+      background: var(--yellow);
+      color: var(--blue-dark) !important;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: 800 !important;
+    }
+
+    .nav-btn:hover {
+      background: #ffe25c;
+    }
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+    width: 100%;
+    background: #041426;
+    color: #ffffff;
+}
+
+
+/* CONTAINER */
+
+.footer-container {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+    padding: 65px 20px 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.2fr
+        1.5fr
+        1fr;
+
+    gap: 55px;
+}
+
+
+/* ==================================================
+   COLUMN
+================================================== */
+
+.footer-column h3 {
+    color: #f5c518;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+.footer-column ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+.footer-column ul li {
+    color: #d5deea;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+.footer-column ul li a {
+    color: #d5deea;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-column ul li a:hover {
+    color: #f5c518;
+
+    padding-left: 5px;
+}
+
+
+/* ==================================================
+   SOCIAL MEDIA
+================================================== */
+
+.footer-social {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+
+.footer-social a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.1);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-social a:hover {
+    background: #f5c518;
+
+    color: #041426;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+
+.contact-icon {
+    color: #f5c518;
+
+    font-size: 18px;
+
+    width: 22px;
+}
+
+
+.contact-item p {
+    color: #d5deea;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* ==================================================
+   OPERATIONAL HOURS
+================================================== */
+
+.operational-item {
+    margin-bottom: 20px;
+}
+
+
+.operational-item p {
+    color: #d5deea;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+
+.operational-item strong {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   FOOTER BOTTOM
+================================================== */
+
+.footer-bottom {
+    background: #020d1b;
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.footer-bottom-container {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.footer-bottom p {
+    color: #8998aa;
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 50px;
+    }
+
+
+    .footer-bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+/* ==================================================
+   VISI MISI SECTION
+================================================== */
+
+.vm-main {
+    width: 100%;
+
+    background: #f5f7fa;
+
+    padding: 95px 20px;
+}
+
+
+.vm-grid {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 25px;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.vm-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 50px 45px;
+
+    min-height: 460px;
+}
+
+
+/* VISI */
+
+.visi-card {
+    background: #071a33;
+}
+
+
+/* MISI */
+
+.misi-card {
+    background: #ffffff;
+
+    box-shadow: 0 15px 45px rgba(7, 26, 51, 0.08);
+}
+
+
+/* NOMOR BESAR */
+
+.vm-number {
+    position: absolute;
+
+    top: 15px;
+    right: 25px;
+
+    font-size: 100px;
+    line-height: 1;
+
+    font-weight: 900;
+
+    color: rgba(245, 197, 24, 0.08);
+}
+
+
+/* LABEL */
+
+.vm-card-label {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    color: #f5c518;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* TITLE */
+
+.vm-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 40px;
+    line-height: 1;
+
+    font-weight: 900;
+
+    margin: 0;
+}
+
+
+.visi-card h3 {
+    color: #ffffff;
+}
+
+
+.misi-card h3 {
+    color: #071a33;
+}
+
+
+/* YELLOW LINE */
+
+.vm-yellow-line {
+    width: 45px;
+    height: 4px;
+
+    background: #f5c518;
+
+    margin: 18px 0 28px;
+}
+
+
+/* ==================================================
+   VISI TEXT
+================================================== */
+
+.visi-text {
+    position: relative;
+
+    z-index: 2;
+
+    color: rgba(255,255,255,0.85);
+
+    font-size: 16px;
+    line-height: 1.9;
+
+    text-align: justify;
+
+    margin: 0;
+}
+
+
+/* ==================================================
+   MISI
+================================================== */
+
+.misi-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.misi-item {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 15px;
+
+    align-items: flex-start;
+}
+
+
+.misi-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f5c518;
+
+    color: #071a33;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+
+.misi-item p {
+    color: #697386;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+</style>
+</head>
+
+
+<!----------------------------------------------------------------------------------->
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="#" class="brand">
+        <div class="brand-icon">KS</div>
+
+        <div class="brand-text">
+          <h2>CV KARYA SEJAHTERA</h2>
+          <span>Distributor FMCG & Pengembangan Pasar</span>
+        </div>
+      </a>
+
+      <ul class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="visi-misi.html">Visi & Misi</a>
+        <a href="tentang-kami.html">Tentang Kami</a>
+        <li><a href="index.html#Our Brands">Brands</a></li>
+        <li><a href="index.html#lokasi" class="nav-btn">Lokasi Toko</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+<!-- ==================================================
+     HERO VISI MISI
+================================================== -->
+
+<section class="vm-hero">
+
+    <div class="vm-container">
+
+        <h2>
+            VISI & <span>MISI</span>
+        </h2>
+
+        <p>
+            Komitmen CV Karya Sejahtera dalam membangun
+            sistem distribusi yang profesional, memperluas
+            jaringan pasar, dan memberikan pelayanan terbaik.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+     VISI & MISI
+================================================== -->
+
+<section class="vm-main">
+    <div class="vm-container">
+        <div class="vm-grid">
+
+            <!-- =====================
+                 VISI
+            ====================== -->
+
+            <div class="vm-card visi-card">
+
+                <div class="vm-number">
+                    01
+                </div>
+
+                <span class="vm-card-label">
+                    ARAH PERUSAHAAN
+                </span>
+
+                <h3>
+                    VISI
+                </h3>
+
+                <div class="vm-yellow-line"></div>
+
+                <p class="visi-text">
+                    Menjadi Perusahaan Distribusi dan Perdagangan
+                    Terbaik Terfavorit di Indonesia Timur,
+                    khususnya dalam pelayanan melalui manajemen
+                    yang solid dan profesional, untuk memberikan
+                    nilai tambah yang signifikan bagi kepentingan
+                    Pelanggan dan Prinsipal kami.
+                </p>
+
+            </div>
+
+            <!-- =====================
+                 MISI
+            ====================== -->
+
+            <div class="vm-card misi-card">
+
+                <div class="vm-number">
+                    02
+                </div>
+
+                <span class="vm-card-label">
+                    KOMITMEN KAMI
+                </span>
+
+                <h3>
+                    MISI
+                </h3>
+
+                <div class="vm-yellow-line"></div>
+
+
+                <div class="misi-list">
+
+
+                    <!-- MISI 1 -->
+                    <div class="misi-item">
+
+                        <span class="misi-icon">
+                            01
+                        </span>
+
+                        <p>
+                            Terus meningkatkan manajemen distribusi
+                            untuk mencapai Praktik Distribusi yang Baik
+                            berdasarkan Sistem Informasi.
+                        </p>
+
+                    </div>
+
+
+                    <!-- MISI 2 -->
+                    <div class="misi-item">
+
+                        <span class="misi-icon">
+                            02
+                        </span>
+
+                        <p>
+                            Memperkuat jaringan dan cakupan pasukan
+                            lapangan untuk mendukung pengembangan
+                            pasar yang lebih luas.
+                        </p>
+
+                    </div>
+
+
+                    <!-- MISI 3 -->
+                    <div class="misi-item">
+
+                        <span class="misi-icon">
+                            03
+                        </span>
+
+                        <p>
+                            Menjaga pertumbuhan produk dalam hal
+                            ketersediaan serta peningkatan nilai
+                            penjualan secara berkelanjutan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- KOLOM 1 -->
+        <div class="footer-column">
+
+            <h3>Profil Perusahaan</h3>
+
+            <ul>
+                <li>
+                    <a href="tentang-kami.html">
+                        Tentang Kami
+                    </a>
+                </li>
+
+                <li>
+                    <a href="visi-misi.html">
+                        Visi & Misi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#Our Brands">
+                        Brand
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#lokasi">
+                        Lokasi
+                    </a>
+                </li>
+            </ul>
+
+
+            <!-- SOCIAL MEDIA -->
+            <div class="footer-social">
+
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    IG
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    in
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    ▶
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- KOLOM 2 -->
+        <div class="footer-column">
+
+            <h3>Layanan Distribusi</h3>
+
+            <ul>
+                <li>
+                    Distribusi FMCG
+                </li>
+
+                <li>
+                    Pengembangan Pasar
+                </li>
+
+                <li>
+                    Warehouse & Logistics
+                </li>
+
+                <li>
+                    Penjualan & Field Force
+                </li>
+
+                <li>
+                    Distribusi Retail & Grosir
+                </li>
+            </ul>
+
+        </div>
+
+
+        <!-- KOLOM 3 -->
+        <div class="footer-column footer-contact">
+
+            <h3>Alamat & Kontak</h3>
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    📍
+                </span>
+
+                <p>
+                    Jl. Niaga No. 9 Ruteng, Manggarai,Nusa Tenggara Timur
+                </p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    📍
+                </span>
+
+                <p>
+                    Jl. Opeseter Maun No.09, Kec. Komodo, Labuan Bajo, Nusa Tenggara Timur
+                </p>
+
+            </div>
+            
+
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ☎
+                </span>
+
+                <p>
+                    +62 8133 9339 900 (Ruteng)
+                </p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ☎
+                </span>
+
+                <p>
+                    +62 8135 3188 593 (Bajo)
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <span class="contact-icon">
+                    ✉
+                </span>
+
+                <p>
+                    info@karyasejahtera.co.id
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- KOLOM 4 -->
+        <div class="footer-column">
+
+            <h3>Jam Operasional</h3>
+
+            <div class="operational-item">
+
+                <p>Senin - Sabtu</p>
+
+                <strong>
+                    08.00 – 17.00 WITA
+                </strong>
+
+            </div>
+
+            <div class="operational-item">
+
+                <p>Minggu</p>
+
+                <strong>
+                    Tutup
+                </strong>
+
+            </div>
+
+            <div class="operational-item">
+
+                <p>Hari Libur</p>
+
+                <strong>
+                    Buka 08.00 – 17.00 WITA
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p>
+                © 2026 CV Karya Sejahtera. All Rights Reserved | Distributor FMCG & Pengembangan Pasar
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
