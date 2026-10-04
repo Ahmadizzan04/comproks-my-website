@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tentang Kami | CV Karya Sejahtera</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    :root {
+      --blue: #0d2d57;
+      --blue-dark: #071a33;
+      --blue-soft: #1f5d9b;
+      --yellow: #f5c518;
+      --yellow-soft: #ffe27a;
+      --white: #ffffff;
+      --light: #f6f8fb;
+      --gray: #6b7280;
+      --dark: #1f2937;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* HEADER */
+    .navbar {
+      background: var(--blue-dark);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+    }
+
+    .brand h2 {
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 10px;
+      color: #9fb0c4;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--yellow);
+    }
+
+    /* HERO */
+    .page-hero {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,26,51,0.96) 0%,
+          rgba(7,26,51,0.82) 48%,
+          rgba(7,26,51,0.45) 100%
+        ),
+        url("assets/img/about-hero.jpg") center/cover no-repeat;
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .page-hero-content {
+      max-width: 760px;
+      padding: 70px 0;
+
+      text-align: justify
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+
+    .page-hero p {
+      max-width: 650px;
+      color: #d9e1ea;
+      font-size: 17px;
+    }
+
+    /* INTRO */
+    .intro {
+      padding: 90px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro-image img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      object-fit: cover;
+      min-height: 430px;
+    }
+
+    .intro-content h2 {
+      font-size: 42px;
+      line-height: 1.15;
+      color: var(--blue-dark);
+      margin-bottom: 24px;
+    }
+
+    .intro-content h2 span {
+      color: var(--yellow);
+    }
+
+    .intro-content p {
+      color: var(--gray);
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .quote-box {
+      margin-top: 28px;
+      padding: 22px 24px;
+      background: #fff8d9;
+      border-left: 5px solid var(--yellow);
+      border-radius: 8px;
+      color: var(--blue-dark);
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    /* STORY SECTION */
+    .story {
+      background: var(--light);
+      padding: 90px 0;
+    }
+
+    .section-title {
+      max-width: 780px;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      color: var(--blue-dark);
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-size: 16px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .story-card {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--yellow);
+    }
+
+    .story-card span {
+      display: inline-block;
+      color: var(--yellow);
+      background: var(--blue-dark);
+      padding: 7px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+
+    .story-card h3 {
+      font-size: 23px;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+    }
+
+    .story-card p {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      padding: 90px 0;
+    }
+
+    .timeline-wrap {
+      position: relative;
+      margin-top: 50px;
+    }
+
+    .timeline-wrap::before {
+      content: "";
+      position: absolute;
+      left: 24px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #dfe6ee;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 75px;
+      margin-bottom: 42px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 10px;
+      top: 3px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--yellow);
+      border: 7px solid #fff6c3;
+      box-shadow: 0 0 0 4px white;
+    }
+
+    .timeline-year {
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .timeline-item h3 {
+      font-size: 22px;
+      color: var(--blue-dark);
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: var(--gray);
+      max-width: 760px;
+    }
+
+    /* VALUES */
+    .values {
+      background: var(--blue-dark);
+      color: white;
+      padding: 90px 0;
+    }
+
+    .values .section-title h2,
+    .values .section-title p {
+      color: white;
+    }
+
+    .values .section-title p {
+      color: #b9c5d4;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .value-card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .value-card h3 {
+      color: var(--yellow);
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .value-card p {
+      color: #c7d0db;
+      font-size: 14px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 80px 0;
+      background: var(--yellow);
+      color: var(--blue-dark);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 25px;
+      font-size: 16px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: var(--blue-dark);
+      color: white;
+      text-decoration: none;
+      padding: 15px 26px;
+      border-radius: 6px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041426;
+      color: #8fa2b8;
+      padding: 25px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .intro-grid,
+      .story-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .intro-image img {
+        min-height: 300px;
+      }
+
+      .intro-content h2,
+      .section-title h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-wrap">
+
+      <a href="index.html" class="brand">
+        <h2>CV KARYA SEJAHTERA</h2>
+        <span>Distributor FMCG & Pengembangan Pasar</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tentang-kami.html" class="active">Tentang Kami</a></li>
+        <li><a href="index.html#distribution">Distribusi</a></li>
+        <li><a href="index.html#coverage">Coverage</a></li>
+        <li><a href="index.html#principal">Principal</a></li>
+        <li><a href="index.html#contact">Kontak</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  
+  <!-- INTRO STORY -->
+  <section class="intro">
+    <div class="container intro-grid">
+
+      <div class="intro-image">
+        <!-- FOTO TOKO BAHAGIA -->
+        <img
+          src="assets/img/toko-bahagia.png"
+          alt="Toko Bahagia - Awal Perjalanan CV Karya Sejahtera"
+        />
+      </div>
+
+      <div class="intro-content">
+
+        <span class="eyebrow">Awal Perjalanan Kami</span>
+
+        <h2>
+          Dari <span>Toko Bahagia</span>
+          Menuju Jaringan Distribusi yang Lebih Luas
+        </h2>
+
+        <p>
+          Kisah CV Karya Sejahtera berawal dari Toko Bahagia,
+          sebuah usaha perdagangan yang tumbuh bersama kebutuhan
+          masyarakat dan perkembangan pasar di wilayah Manggarai.
+        </p>
+
+        <p>
+          Dari aktivitas penjualan sehari-hari, kami belajar bahwa
+          keberhasilan bisnis bukan hanya ditentukan oleh produk yang
+          dijual, tetapi juga oleh ketersediaan barang, ketepatan distribusi,
+          pelayanan, serta kepercayaan yang dibangun dengan pelanggan.
+        </p>
+
+        <p>
+          Pengalaman tersebut menjadi fondasi bagi perusahaan untuk
+          mengembangkan sistem distribusi yang lebih terstruktur.
+          Seiring bertambahnya pelanggan dan meningkatnya kepercayaan
+          dari mitra bisnis, Toko Bahagia berkembang menjadi
+          CV Karya Sejahtera.
+        </p>
+
+        <div class="quote-box">
+          “Bertumbuh dari perdagangan lokal, berkembang melalui kepercayaan,
+          dan terus bergerak untuk memperluas distribusi.”
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TIMELINE -->
+  <section class="timeline">
+    <div class="container">
+
+      <div class="section-title">
+        <span class="eyebrow">Our Journey</span>
+
+        <h2>
+          Perjalanan Menuju CV Karya Sejahtera
+        </h2>
+
+        <p>
+          Timeline ini nanti bisa kita sesuaikan lagi dengan tahun
+          sebenarnya berdasarkan sejarah perusahaan.
+        </p>
+      </div>
+
+      <div class="timeline-wrap">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-year">AWAL PERJALANAN</div>
+
+          <h3>Toko Bahagia</h3>
+
+          <p>
+            Memulai perjalanan dari usaha perdagangan dengan fokus
+            melayani kebutuhan pelanggan dan membangun kepercayaan
+            di pasar lokal.
+          </p>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-year">2005</div>
+
+          <h3>CV Karya Sejahtera Berdiri</h3>
+
+          <p>
+            Perjalanan bisnis memasuki tahap baru melalui pembentukan
+            CV Karya Sejahtera dengan fokus yang lebih besar pada
+            perdagangan dan distribusi.
+          </p>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-year">PERTUMBUHAN</div>
+
+          <h3>Jaringan Distribusi Semakin Luas</h3>
+
+          <p>
+            Perusahaan memperkuat jaringan pelanggan, sistem warehouse,
+            logistik, serta field force untuk mendukung distribusi produk
+            secara lebih efektif.
+          </p>
+        </div>
+
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-year">HARI INI</div>
+
+          <h3>Distributor FMCG & Pengembangan Pasar</h3>
+
+          <p>
+            CV Karya Sejahtera terus berkembang sebagai mitra Principal
+            dengan fokus pada perluasan pasar, ketersediaan produk,
+            distribusi, dan pertumbuhan nilai penjualan.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="container">
+
+      <div class="section-title">
+        <span class="eyebrow">Fondasi Kami</span>
+
+        <h2>
+          Nilai yang Membentuk Perjalanan Kami
+        </h2>
+
+        <p>
+          Pengalaman panjang dari perdagangan hingga distribusi
+          membentuk prinsip kerja yang terus kami pertahankan.
+        </p>
+      </div>
+
+      <div class="values-grid">
+
+        <div class="value-card">
+          <h3>Kepercayaan</h3>
+
+          <p>
+            Menjaga hubungan jangka panjang dengan pelanggan
+            dan Principal melalui komitmen serta transparansi.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3>Pelayanan</h3>
+
+          <p>
+            Memberikan pelayanan profesional dengan memahami
+            kebutuhan setiap pasar dan mitra bisnis.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3>Pertumbuhan</h3>
+
+          <p>
+            Terus memperluas jaringan, meningkatkan sistem,
+            dan menciptakan nilai tambah bagi Principal.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+
+      <h2>
+        Tumbuh Bersama CV Karya Sejahtera
+      </h2>
+
+      <p>
+        Kami terus membuka peluang kemitraan dengan Principal
+        yang ingin memperluas distribusi dan mengembangkan pasar
+        di Indonesia Timur.
+      </p>
+
+      <a href="index.html#contact">
+        Kerja Sama dengan Kami
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      © 2026 CV Karya Sejahtera. Distributor FMCG & Pengembangan Pasar.
+    </div>
+  </footer>
+
+</body>
+</html>
